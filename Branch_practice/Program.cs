@@ -82,8 +82,57 @@ else
     Console.WriteLine("Digit two is bigger than 100");
 }
 
-var digit3 = 35.8;
-var digit4 = 5.5;
+
+double digit3 = 35.8234;
+double digit4 = 5.5567;
 
 var digitSum = Math.Round(digit3 + digit4);
 Console.WriteLine(digitSum);
+
+double differenceNumber = digit3 - digit4;
+if(differenceNumber < 0)
+{
+    differenceNumber *= -1;
+}
+differenceNumber = Math.Round(differenceNumber, 2);
+Console.WriteLine(differenceNumber);
+
+
+int time = 8;
+int day = 7;
+int month = 3;
+int year = 2022;
+
+if(time > 0 && time < 12)
+{
+    Console.WriteLine("Good morning sunshine");
+}
+else if(time >= 13 && time <= 19)
+{
+    Console.WriteLine("Good Afternoon. Work hard");
+}
+else if(time >= 20 && time <= 24)
+{
+    Console.WriteLine("Good evening. Get some rest");
+}
+else
+{
+    Console.WriteLine("Please enter a valid time variable");
+} 
+
+if (day <= 0 || day >= 32)
+{
+    Console.WriteLine("Please enter a valid day variable");
+}
+else if (month <= 0 || month >= 12)
+{
+    Console.WriteLine("Please enter a valid month variable");
+}
+else if (year <= 0)
+{
+    Console.WriteLine("Please enter a valid year variable");
+}
+else
+{
+    Console.WriteLine(year.ToString() + "/" + month.ToString("d2") + "/" + day.ToString("d2"));
+}
